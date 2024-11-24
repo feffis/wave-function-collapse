@@ -154,3 +154,13 @@ function draw() {
     noLoop();
   }
 }
+
+function cambiarDireccion(_celda, _regla, _opuesto) {
+  const nuevasOpciones = [];
+  for (let i = 0; i < _celda.opciones.length; i++) {
+    if (_regla == reglas[_celda.opciones[i]][_opuesto]) {
+      nuevasOpciones.push(_celda.opciones[i]);
+    }
+  }
+  _celda.opciones = nuevasOpciones;
+}
